@@ -1,0 +1,112 @@
+{
+    "name": "vuravel/components",
+    "description": "Vue.js & Laravel Components - The basic building blocks",
+    "keywords": [
+        "vue","vuejs","vue-js",
+        "laravel","php","framework","cms",
+        "vuravel",
+        "component","components",
+        "button","buttons",
+        "modal","modals",
+        "link","links"
+    ],
+    "license": "MIT",
+    "require": {
+    	"php": ">=7.1.0",
+        "laravel/framework": ">=5.6.0",
+        "vuravel/catalog": "dev-master",
+        "vuravel/form": "dev-master",
+        "vuravel/menu": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vuravel\\Components\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vuravel\\Components\\VuravelComponentsServiceProvider"
+            ],
+            "aliases": {
+                "VlCatalog": "Vuravel\\Components\\Catalog",
+                "VlCard": "Vuravel\\Components\\Card",
+                "VlAddButton": "Vuravel\\Components\\AddButton",
+                "VlAddLink": "Vuravel\\Components\\AddLink",
+                "VlDeleteLink": "Vuravel\\Components\\DeleteLink",
+                "VlEditButton": "Vuravel\\Components\\EditButton",
+                "VlEditLink": "Vuravel\\Components\\EditLink",
+                "VlForm": "Vuravel\\Components\\Form",
+                "VlBadge": "Vuravel\\Components\\Badge",
+                "VlButton": "Vuravel\\Components\\Button",
+                "VlCheckbox": "Vuravel\\Components\\Checkbox",
+                "VlCKEditor": "Vuravel\\Components\\CKEditor",
+                "VlCode": "Vuravel\\Components\\Code",
+                "VlColumns": "Vuravel\\Components\\Columns",
+                "VlCountry": "Vuravel\\Components\\Country",
+                "VlDate": "Vuravel\\Components\\Date",
+                "VlEditableCKEditor": "Vuravel\\Components\\EditableCKEditor",
+                "VlEditableTextarea": "Vuravel\\Components\\EditableTextarea",
+                "VlFile": "Vuravel\\Components\\File",
+                "VlFlex": "Vuravel\\Components\\Flex",
+                "VlFlexAround": "Vuravel\\Components\\FlexAround",
+                "VlFlexBetween": "Vuravel\\Components\\FlexBetween",
+                "VlFlexCenter": "Vuravel\\Components\\FlexCenter",
+                "VlFlexEnd": "Vuravel\\Components\\FlexEnd",
+                "VlHidden": "Vuravel\\Components\\Hidden",
+                "VlHtml": "Vuravel\\Components\\Html",
+                "VlImage": "Vuravel\\Components\\Image",
+                "VlInput": "Vuravel\\Components\\Input",
+                "VlJson": "Vuravel\\Components\\Json",
+                "VlLink": "Vuravel\\Components\\Link",
+                "VlListe": "Vuravel\\Components\\Liste",
+                "VlMultiFile": "Vuravel\\Components\\MultiFile",
+                "VlMultiForm": "Vuravel\\Components\\MultiForm",
+                "VlMultiImage": "Vuravel\\Components\\MultiImage",
+                "VlMultiPlace": "Vuravel\\Components\\MultiPlace",
+                "VlMultiSelect": "Vuravel\\Components\\MultiSelect",
+                "VlPanel": "Vuravel\\Components\\Panel",
+                "VlPanel1": "Vuravel\\Components\\Panel1",
+                "VlPanel2": "Vuravel\\Components\\Panel2",
+                "VlPanel3": "Vuravel\\Components\\Panel3",
+                "VlPanel4": "Vuravel\\Components\\Panel4",
+                "VlPanel5": "Vuravel\\Components\\Panel5",
+                "VlPassword": "Vuravel\\Components\\Password",
+                "VlPlace": "Vuravel\\Components\\Place",
+                "VlRows": "Vuravel\\Components\\Rows",
+                "VlSearch": "Vuravel\\Components\\Search",
+                "VlSelect": "Vuravel\\Components\\Select",
+                "VlSelectButtons": "Vuravel\\Components\\SelectButtons",
+                "VlSelectLinks": "Vuravel\\Components\\SelectLinks",
+                "VlSelectUpdatable": "Vuravel\\Components\\SelectUpdatable",
+                "VlStripe": "Vuravel\\Components\\Stripe",
+                "VlTableCatalog": "Vuravel\\Components\\TableCatalog",
+                "VlTab": "Vuravel\\Components\\Tab",
+                "VlTabs": "Vuravel\\Components\\Tabs",
+                "VlTextarea": "Vuravel\\Components\\Textarea",
+                "VlTh": "Vuravel\\Components\\Th",
+                "VlTime": "Vuravel\\Components\\Time",
+                "VlTitle": "Vuravel\\Components\\Title",
+                "VlToggle": "Vuravel\\Components\\Toggle",
+                "VlToggleInput": "Vuravel\\Components\\ToggleInput",
+                "VlToolbar": "Vuravel\\Components\\Toolbar",
+                "VlTranslatable": "Vuravel\\Components\\Translatable",
+                "VlTranslatableEditor": "Vuravel\\Components\\TranslatableEditor",
+                "VlTrix": "Vuravel\\Components\\Trix",
+                "VlMenu": "Vuravel\\Components\\Menu",
+                "VlAuthMenu": "Vuravel\\Components\\AuthMenu",
+                "VlCollapse": "Vuravel\\Components\\Collapse",
+                "VlCollapseOnMobile": "Vuravel\\Components\\CollapseOnMobile",
+                "VlDropdown": "Vuravel\\Components\\Dropdown",
+                "VlLocales": "Vuravel\\Components\\Locales",
+                "VlLogo": "Vuravel\\Components\\Logo",
+                "VlNavSearch": "Vuravel\\Components\\NavSearch"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
