@@ -16,6 +16,46 @@ if(! function_exists('VlCard'))
     }
 }
 
+if(! function_exists('VlIconText'))
+{
+    function VlIconText()
+    {
+        return Vuravel\Components\IconText::form(...func_get_args());
+    }
+}
+
+if(! function_exists('VlImageTitleDesc'))
+{
+    function VlImageTitleDesc()
+    {
+        return Vuravel\Components\ImageTitleDesc::form(...func_get_args());
+    }
+}
+
+if(! function_exists('VlImageTitleOverlay'))
+{
+    function VlImageTitleOverlay()
+    {
+        return Vuravel\Components\ImageTitleOverlay::form(...func_get_args());
+    }
+}
+
+if(! function_exists('VlImageTitleRow'))
+{
+    function VlImageTitleRow()
+    {
+        return Vuravel\Components\ImageTitleRow::form(...func_get_args());
+    }
+}
+
+if(! function_exists('VlTableRow'))
+{
+    function VlTableRow()
+    {
+        return Vuravel\Components\TableRow::form(...func_get_args());
+    }
+}
+
 if(! function_exists('VlAddButton'))
 {
     function VlAddButton()
@@ -125,6 +165,14 @@ if(! function_exists('VlDate'))
     function VlDate()
     {
         return Vuravel\Components\Date::form(...func_get_args());
+    }
+}
+
+if(! function_exists('VlDateTime'))
+{
+    function VlDateTime()
+    {
+        return Vuravel\Components\DateTime::form(...func_get_args());
     }
 }
 

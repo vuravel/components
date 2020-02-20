@@ -1,6 +1,6 @@
 {
     "name": "vuravel/components",
-    "description": "Vue.js & Laravel Components - The basic building blocks",
+    "description": "Vue.js & Laravel FullStack Components - Rapid Application Development",
     "keywords": [
         "vue","vuejs","vue-js",
         "laravel","php","framework","cms",
@@ -31,6 +31,11 @@
             "aliases": {
                 "VlCatalog": "Vuravel\\Components\\Catalog",
                 "VlCard": "Vuravel\\Components\\Card",
+                "VlTableRow": "Vuravel\\Components\\TableRow",
+                "VlIconText": "Vuravel\\Components\\IconText",
+                "VlImageTitleDesc": "Vuravel\\Components\\ImageTitleDesc",
+                "VlImageTitleOverlay": "Vuravel\\Components\\ImageTitleOverlay",
+                "VlImageTitleRow": "Vuravel\\Components\\ImageTitleRow",
                 "VlAddButton": "Vuravel\\Components\\AddButton",
                 "VlAddLink": "Vuravel\\Components\\AddLink",
                 "VlDeleteLink": "Vuravel\\Components\\DeleteLink",
@@ -45,6 +50,7 @@
                 "VlColumns": "Vuravel\\Components\\Columns",
                 "VlCountry": "Vuravel\\Components\\Country",
                 "VlDate": "Vuravel\\Components\\Date",
+                "VlDateTime": "Vuravel\\Components\\DateTime",
                 "VlEditableCKEditor": "Vuravel\\Components\\EditableCKEditor",
                 "VlEditableTextarea": "Vuravel\\Components\\EditableTextarea",
                 "VlFile": "Vuravel\\Components\\File",
