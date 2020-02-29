@@ -40,13 +40,7 @@ You need `composer` to pull the vendor packages.
 If you have a Laravel 5.6+ application installed, you may install `vuravel/form` via `composer` by running the following terminal command at your project's root folder:
 
 ```sh
-composer require vuravel/form
-```
-
-<b>Optional step (recommended)</b> - if you wish to store file uploads in a separate `medias` table or addresses in a `places` table, you can leverage already built migrations from vuravel:
-
-```sh
-php artisan migrate
+composer require vuravel/components
 ```
 
 #### Npm - Front-End setup
@@ -54,36 +48,64 @@ php artisan migrate
 To pull the front-end module into your development environment, you will need to have `nodejs` and `npm` installed on your machine. Then you may run this command:
 
 ```sh
-npm install --save vuravel-form
+npm install --save vuravel-components
 ```
 
 Once the install process is finished, you should import the javascript modules in your `app.js` . This will import all the Vue components from `vuravel/form` into your project and you will be able to use them everywhere in your Vue.js code.
 
 ```js
-//in your app.js, after window.Vue = require('vue');
-import VuravelForm from 'vuravel-form';
-Vue.use(VuravelForm);
+//app.js
+window.Vue = require('vue');
+
+//Adding vuravel after Vue has been required
+require('vuravel-components')
 ```
 
 And to import the scss code, add this line to your `app.scss` :
 
 ```js
-//in your app.scss 
-@import '~vuravel-form/sass/form-style-floating';
-// or if you prefer another style:
-// @import '~vuravel-form/sass/form-style-bootstrap';
+//app.scss
+
+//For Forms: Pick your favorite form style
+@import  'vuravel-form/sass/bootstrap-style';
+//@import  'vuravel-form/sass/md-filled-style';
+//@import  'vuravel-form/sass/md-outlined-style';
+//@import  'vuravel-form/sass/floating-style';
+
+//For Catalogs:
+@import  'vuravel-catalog/sass/catalog';
+
+//For Menus: Choose between minimal and classic style
+@import  'vuravel-menu/sass/minimal-style';
+//@import  'vuravel-menu/sass/classic-style';
 ```
 
-After that just compile the assets and you are all set!
+After that just compile the assets.
 
 ```sh
 npm run dev
 ```
 
+And reference them in your template.
+
+```html
+<!-- header -->
+<link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+<!-- scripts -->
+<script src="{{ mix('js/app.js') }}"></script>
+```
+
+You are now ready to start creating Vuravel components!
+
 ## DOCUMENTATION
 
 Please refer to the website's complete <a href="https://vuravel.com/docs" target="_blank">Documentation</a>
 
+## COMPONENTS API
+
+<a href="https://vuravel.com/api" target="_blank">API</a>
+
 ## DEMOS
 
-<a href="https://vuravel.com/examples" target="_blank">Examples (interactive)</a>
+<a href="https://vuravel.com/examples" target="_blank">Examples</a>
