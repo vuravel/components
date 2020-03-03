@@ -20,7 +20,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Vuravel\\Components\\": "src/"
+            "Vuravel\\Components\\": "src/",
+            "Vuravel\\Components\\Tests\\": "tests/"
         }
     },
     "extra": {
