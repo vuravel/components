@@ -17,6 +17,9 @@ class VuravelComponentsServiceProvider extends ServiceProvider
 
         if (file_exists($file = __DIR__.'/VuravelComponentsHelpers.php'))
             require_once $file;
+        
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'vuravel');
+        $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
     }
 
     /**

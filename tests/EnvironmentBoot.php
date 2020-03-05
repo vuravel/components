@@ -2,11 +2,11 @@
 
 namespace Vuravel\Components\Tests;
 
-use Orchestra\Testbench\TestCase;
 use Illuminate\Database\Eloquent\Factory;
-use App\User;
-use Vuravel\Form\Http\Requests\FormValidationRequest;
+use Orchestra\Testbench\TestCase;
 use Vuravel\Components\Tests\Forms\SimplePostForm;
+use Vuravel\Components\Tests\Models\User;
+use Vuravel\Form\Http\Requests\FormValidationRequest;
 
 class EnvironmentBoot extends TestCase
 {
@@ -26,6 +26,10 @@ class EnvironmentBoot extends TestCase
 
         //Migrations... (only dependency on Orchestra Package)
         $this->loadMigrationsFrom(__DIR__.'/Migrations');
+
+        //Load views for Fron-end testing
+        \View::addNamespace('vuravel', __DIR__.'/../resources/views');
+        \View::addLocation(__DIR__.'/resources/views');
 
         //Factories and user
         $this->loadFactories();
@@ -85,7 +89,9 @@ class EnvironmentBoot extends TestCase
     protected function loadRoutes()
     {
         //Load package routes
+        require(__DIR__.'/../routes/web.php');
         require(__DIR__.'/../../form/routes/web.php');
+        require(__DIR__.'/../../catalog/routes/web.php');
 
         //Add a test route for simulating POSTs
         \Route::post('test-post-route', function(FormValidationRequest $request){
