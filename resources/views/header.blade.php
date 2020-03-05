@@ -14,18 +14,23 @@
 	@endforeach
 
 @else
-	
-	@if(file_exists(public_path('css/app.css')) && file_exists(public_path('js/manifest.js')))
-		
-		<link id="vl-css-1" href="{{ mix('css/app.css') }}" rel="stylesheet">
 
-	@else
+	@if(file_exists(public_path('mix-manifest.json')))
+	@foreach(json_decode(file_get_contents(public_path('mix-manifest.json')), true) as $path => $manifest)
 
-		@includeIf('vuravel.styles')
+		@if(substr($path, -4) == '.css')
 
+			<link href="{{ mix($path) }}" rel="stylesheet">
+
+		@endif
+
+	@endforeach
 	@endif
 
 @endif
+
+<!-- additional global custom styles included if available -->
+@includeIf('vuravel.styles')
 
 <!-- Header -->
 @stack('header')
